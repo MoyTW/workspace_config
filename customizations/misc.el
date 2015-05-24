@@ -1,3 +1,6 @@
+;; Allows Shift-ArrowKey navigation for windows
+(windmove-default-keybindings)
+
 ;; Changes all yes/no questions to y/n type
 (fset 'yes-or-no-p 'y-or-n-p)
 
