@@ -1,5 +1,8 @@
 ;; Customizations relating to editing a buffer.
 
+;; RETURN also indents
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
 ;; Key binding to use "hippie expand" for text autocompletion
 ;; http://www.emacswiki.org/emacs/HippieExpand
 (global-set-key (kbd "M-/") 'hippie-expand)
