@@ -1,5 +1,8 @@
 ;; Customizations relating to editing a buffer.
 
+;; Show column number
+(column-number-mode 1)
+
 ;; RETURN also indents
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
