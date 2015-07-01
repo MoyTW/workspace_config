@@ -1,5 +1,8 @@
 ;; Customizations relating to editing a buffer.
 
+;; Set the default line length to 80
+(setq-default fill-column 80)
+
 ;; Show column number
 (column-number-mode 1)
 
