@@ -24,7 +24,9 @@
 (package-initialize)
 
 ;; Pin cider to stable
-(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
+(if (version<= emacs-version "24.4")
+  (progn (message "ERROR: Cannot pin cider to stable; upgrade to 24.4!"))
+  (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t))
 
 ;; Download the ELPA archive description if needed.
 ;; This informs Emacs about the latest versions of all packages, and
