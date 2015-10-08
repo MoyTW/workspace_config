@@ -29,6 +29,9 @@
 ;; Cider
 ;;;;
 
+;; Stops that dammnable constant propping for M-. (why, 9.1? WHY!?!?)
+(setq cider-prompt-for-symbol nil)
+
 ;; provides minibuffer documentation for the code you're typing into the repl
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
