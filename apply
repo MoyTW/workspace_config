@@ -1,4 +1,5 @@
 #! /bin/bash
 
+cp .bash_work ~/.bash_work
 cp .bash_profile ~/.bash_profile
 cp .bashrc ~/.bashrc
