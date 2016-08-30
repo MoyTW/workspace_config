@@ -1,5 +1,0 @@
-#! /bin/bash
-
-cp ./bash/.bash_work ~/.bash_work
-cp ./bash/.bash_profile ~/.bash_profile
-cp ./bash/.bashrc ~/.bashrc

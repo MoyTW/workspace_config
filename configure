@@ -1,0 +1,37 @@
+#! /bin/bash
+
+function program_check {
+    if [ ! $(which "$1") ]; then
+        return 1
+    else
+        return 0
+    fi
+}
+
+if $(program_check "bash"); then
+    echo "bash found, copying .bash_profile, .bashrc, optionally .bash_work"
+
+    cp ./bash/.bash_profile ~/.bash_profile
+    cp ./bash/.bashrc ~/.bashrc
+
+    if [ -s ./bash./.bash_work ]; then
+        cp ./bash/.bash_work ~/.bash_work
+    fi
+
+    echo "  - bash configured"
+else
+    echo "bash not found, skipping"
+fi
+
+if $(program_check "emacs"); then
+    echo "emacs found, overwriting emacs.d"
+
+    if [ -s ~/.emacs.d ] ; then
+        rm -r ~/.emacs.d
+    fi
+    cp -r ./emacs/ ~/.emacs.d
+
+    echo "  - emacs configured"
+else
+    echo "emacs not found, skipping"
+fi
