@@ -18,7 +18,14 @@ alias gl='git log'
 alias gp='git pull'
 alias grh='git reset HEAD'
 alias grhp='git reset HEAD -p'
+alias gsh='git show'
 alias gst='git status'
+
+# Lein Tests
+test_out='/tmp/testoutput.log'
+alias rlt='lein test > $test_out'
+alias flt='egrep -B 3 "ERROR in|FAIL in" $test_out | grep lein'
+alias tlt='tail -f $test_out'
 
 # Source Autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
