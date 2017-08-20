@@ -13,6 +13,7 @@ if $(program_check "bash"); then
 
     cp ./bash/.bash_profile ~/.bash_profile
     cp ./bash/.bashrc ~/.bashrc
+    source ~/.bashrc
 
     if [ -s ./bash./.bash_work ]; then
         cp ./bash/.bash_work ~/.bash_work
