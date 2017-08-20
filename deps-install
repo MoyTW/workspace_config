@@ -4,9 +4,13 @@ osname="$(uname -s)"
 
 case "${osname}" in
   Linux*)
+    # Essentials
     sudo apt-get -y install keepassx
     sudo apt-get -y install git
     sudo apt-get -y install emacs
     sudo apt-get -y install autojump
+    sudo apt-get -y install build-essential
+    # Python
+    sudo apt-get -y install virtualenv
     ;;
 esac
